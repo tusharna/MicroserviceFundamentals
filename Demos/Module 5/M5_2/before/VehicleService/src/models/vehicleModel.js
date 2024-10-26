@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
 
 /**
  * @swagger
@@ -38,8 +38,14 @@ const { v4: uuidv4 } = require('uuid');
  *         rentalPrice: 50
  */
 class Vehicle {
-  
-  
+  constructor(registrationNumber, make, model, year, rentalPrice) {
+    this.id = uuidv4();
+    this.registrationNumber = registrationNumber;
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.rentalPrice = rentalPrice;
+  }
 }
 
 module.exports = Vehicle;

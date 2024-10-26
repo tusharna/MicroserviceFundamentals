@@ -89,7 +89,7 @@ app.get("/", (req, res) => {
  */
 
 //Todo: Add a route handler for POST /vehicle
-
+app.post("/vehicle",vehicleService.createVehicle);
 /**
  * @swagger
  * /vehicle/{id}:
@@ -121,7 +121,7 @@ app.get("/", (req, res) => {
  */
 
 //Todo: Add a route handler for PUT /vehicle/:id
-
+app.put("/vehicle/:id",vehicleService.updateVehicle);
 /**
  * @swagger
  * /vehicle/{id}:
@@ -143,7 +143,7 @@ app.get("/", (req, res) => {
  */
 
 //Todo: Add a route handler for DELETE /vehicle/:id
-
+app.delete("/vehicle/:id",vehicleService.deleteVehicle);
 /**
  * @swagger
  * /vehicle/{id}:
@@ -171,7 +171,7 @@ app.get("/", (req, res) => {
  */
 
 //Todo: Add a route handler for GET /vehicle/:id
-
+app.get("/vehicle/:id",vehicleService.getVehicle);
 /**
  * @swagger
  * /vehicles:
@@ -192,7 +192,7 @@ app.get("/", (req, res) => {
  *       500:
  *         description: Internal server error.
  */
-
+app.get("/vehicles",vehicleService.getAllVehicles);
 //Todo: Add a route handler for GET /vehicles
 
 /**
@@ -222,7 +222,7 @@ app.get("/", (req, res) => {
  */
 
 //Todo: Add a route handler for GET /vehicle/search/:registrationNumber
-
+app.get("/vehicle/search/:registrationNumber",vehicleService.searchVehicleByRegistrationNumber);
 
 /**
  * @swagger
@@ -251,7 +251,7 @@ app.get("/", (req, res) => {
  *       500:
  *         description: Internal server error.
  */
-
+app.get("/vehicles/price/:maxPrice",vehicleService.lookupVehiclesByMaxRentalPrice);
 //Todo: Add a route handler for GET /vehicles/price/:maxPrice
 
 
